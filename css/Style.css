@@ -1,0 +1,495 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'roboto', sans-serif;
+	
+}
+section{
+    padding:2rem 7%;
+}
+
+.heading{
+    text-align: center;
+    color:Red;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+	margin-top:90px;
+	margin-bottom:20px;
+}
+
+.heading span{
+    color: Black;
+    text-transform: uppercase;
+
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+}
+
+body{
+	background-image: url(../images/hand.jpg);
+	background-color:#eee;
+	
+}
+.navbar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #f5f5f5;
+    z-index: 9;
+}
+
+.nav{
+    padding: 10px 10vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.brand-logo{
+    height: 60px;
+}
+
+.nav-items{
+    display: flex;
+    align-items: center;
+}
+
+.search{
+    width: 500px;
+    display: flex;
+}
+
+.search-box{
+    width: 80%;
+    height: 40px;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 1px solid #d1d1d1;
+    text-transform: capitalize;
+    background: none;
+    color: Black;
+    outline: none;
+}
+
+.search-btn{
+    width: 20%;
+    height: 40px;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #383838;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 15px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.search-box::placeholder{
+    color: #a9a9a9;
+}
+
+.nav-items a{
+    margin-left: 20px;
+}
+
+.nav-items a img{
+    width: 35px;
+}
+
+.links-container{
+    width: 100%;
+    display: flex;
+    padding: 12px 10px;
+    justify-content: center;
+    list-style: none;
+    border-top: 3px solid #010101;
+
+}
+
+.link{
+    text-transform: capitalize;
+    padding: 0 15px;
+    margin: 0 50px;
+    text-decoration: none;
+    color: Black;
+    opacity: 0.5;
+    transition: .5s;
+	font-weight: bold;
+	font-size: 20px;
+
+}
+
+.link:hover{
+    opacity: 1;
+}
+
+.container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform-style: preserve-3d;
+	transform-origin: center;
+	perspective: 2000px;
+}
+.home{
+	margin-top: -50px;
+}
+.left{
+	flex-basis: 100%;
+	animation: animate 3s linear infinite;
+}
+.left img{
+	width: 100%;
+	padding-top: 100px;
+}
+
+
+.right{
+	flex-basis: 50%;
+	max-width: 400px;
+	margin-left: -50px;
+	margin-right: -50px;
+}
+
+.right h1{
+	font-size: 42px;
+}
+.container .right h1 span{
+	color: #F31414;
+}
+.right p{
+	font-size: 25px;
+	margin:20px 0px;
+}
+.Buy-btn{
+    padding: 15px 35px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #101010;
+    color: white;
+    text-transform: capitalize;
+    font-size: 16px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+	border-top-left-radius:10px;
+	border-bottom-left-radius:10px;
+	text-decoration: none;
+	
+}
+.about .row{
+    display: flex;
+    align-items: center;
+    background: #13131a;
+    flex-wrap: wrap;
+}
+
+.about .row .image{
+    flex:1 1 45rem;
+}
+
+.about .row .image img{
+    width: 100%;
+}
+.about .row .content{
+    flex:1 1 45rem;
+    padding:2rem;
+}
+
+.about .row .content h3{
+    font-size: 3rem;
+    color:#fff;
+}
+
+.about .row .content p{
+    font-size: 1.6rem;
+    color:#ccc;
+    padding:1rem 0;
+    line-height: 1.8;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding:.9rem 3rem;
+    font-size: 1.7rem;
+    color:#fff;
+    background:#FFC300;
+    cursor: pointer;
+	text-decoration: none;
+}
+
+.btn:hover{
+    letter-spacing: .1rem;
+
+}
+
+.Best .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+}
+
+.Best .box-container .box{
+    flex:1 1 30rem;
+    height:25rem;
+    position: relative;
+    overflow:hidden;
+    border:1rem solid #1A1F24;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    background:#D3D3D2;
+    border-radius: .5rem;
+}
+
+.Best .box-container .box img{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+    border-radius: .5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.Best .box-container .box:hover img{
+    height:75%;
+    width:75%;
+	
+}
+
+.Best .box-container .box h3{
+    position: absolute;
+    bottom:.5rem; left:1rem;
+    font-size: 15px;
+    color:#333;
+    text-transform: uppercase;
+	margin-bottom:8px;
+}
+
+.Best .box-container .box .icons{
+    position: absolute;
+    top:1rem; right:1rem;
+}
+
+.Best .box-container .box .icons a{
+    display: block;
+    height:4rem;
+    width:4rem;
+    border-radius: .5rem;
+    background: #eee;
+    color:#2B5177;
+    font-size: 1.7rem;
+    line-height: 4rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.Best .box-container .box .icons a:hover{
+    background:Black;
+    color:red;
+}
+
+#Products{
+	padding: 80px 0px;
+}
+
+.Products-row{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	
+}
+.Products-box{
+	flex-basis: 15%;
+	box-shadow: 2px 3px 5px grey;
+	padding: 10px;
+	text-align: center;
+	background:#D3D3D2;
+	border:1rem solid #1A1F24;
+}
+
+.Products-box img{
+	width: 100%;
+
+}
+.Products-box h2{
+	margin:20px 0px;
+}
+.Products-box h3{
+	background: black;
+	color: white;
+	padding: 10px;
+	
+}
+
+.Products-box:hover{
+	transform: translateY(-40px);
+	transition: 0.4s ease;
+}
+
+.review .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+}
+
+.review .box-container .box{
+    flex:1 1 30rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    border-radius: .5rem;
+    padding:3rem 2rem;
+    position: relative;
+    border:.1rem solid rgba(0,0,0,.1);
+	border-color: Black;
+	border-width:5px;
+	background-color:#D3D3D2;
+}
+
+.review .box-container .box .fa-quote-right{
+    position: absolute;
+    bottom:3rem; right:3rem;
+    font-size: 6rem;
+    color:#eee;
+}
+
+.review .box-container .box .stars i{
+    color:#D4EB29;
+    font-size: 2rem;
+}
+
+.review .box-container .box p{
+    color:#151613;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    padding-top: 2rem;
+}
+
+.review .box-container .box .user{
+    display: flex;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.review .box-container .box .user img{
+    height:6rem;
+    width:6rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1rem;
+}
+
+.review .box-container .box .user h3{
+    font-size: 18px;
+    color:#151613;
+}
+
+.review .box-container .box .user span{
+    font-size: 1.5rem;
+    color:#151613;
+}
+
+.contact .row{
+    display: flex;
+    background:#1A1F24;
+    flex-wrap: wrap;
+    gap:1rem;
+}
+
+.contact .row .map{
+    flex:1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.contact .row form{
+    flex:1 1 45rem;
+    padding:5rem 2rem;
+    text-align: center;
+}
+
+.contact .row form h3{
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    color:#eee;
+}
+
+.contact .row form .inputBox{
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background:#D3D3D2;
+    border-color:Black;
+}
+
+.contact .row form .inputBox span{
+    color:Black;
+    font-size: 2rem;
+    padding-right: 2rem;
+	padding-left: 2rem;
+}
+
+.contact .row form .inputBox input{
+    width: 100%;
+    padding:2rem;
+    font-size: 1.7rem;
+    text-transform: none;
+    background:none;
+}
+.footer{
+    background:Grey;
+    text-align: center;
+}
+
+.footer .share{
+    padding:1rem 0;
+}
+
+.footer .share a{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color:Black;
+    margin:.3rem;
+	border-style: solid;
+	border-width: 2px;
+    border-radius: 50%;
+}
+
+.footer .share a:hover{
+    background-color:Orange;
+	
+}
+
+.footer .links{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:2rem 0;
+    gap:1rem;
+}
+
+.footer .links a{
+    padding:.7rem 2rem;
+    color:#eee;
+	border-radius: 300px;
+    font-size: 2rem;
+	text-decoration: none;
+	border-style: solid;
+	border-width: 4px;
+}
+
+.footer .links a:hover{
+    background:Orange;
+}
