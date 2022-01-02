@@ -35,9 +35,12 @@ html{
 
 body{
 	background-image: url(../images/hand.jpg);
-	background-color:#eee;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
 	
 }
+
 .navbar{
     position: sticky;
     top: 0;
@@ -45,10 +48,12 @@ body{
     width: 100%;
     background: #f5f5f5;
     z-index: 9;
+	border: 1px solid;
+	border-left: none;
 }
 
 .nav{
-    padding: 10px 10vw;
+    padding: 8px 10vw;
     display: flex;
     justify-content: space-between;
 }
@@ -110,17 +115,18 @@ body{
 .links-container{
     width: 100%;
     display: flex;
-    padding: 12px 10px;
+    padding: 12px 8px;
     justify-content: center;
-    list-style: none;
+    list-style: none;	
     border-top: 3px solid #010101;
+	border-left: none;
 
 }
 
 .link{
     text-transform: capitalize;
-    padding: 0 15px;
-    margin: 0 50px;
+    padding: 5px;
+    margin: 25px;
     text-decoration: none;
     color: Black;
     opacity: 0.5;
@@ -143,7 +149,7 @@ body{
 	perspective: 2000px;
 }
 .home{
-	margin-top: -50px;
+	margin-top: -80px;
 }
 .left{
 	flex-basis: 100%;
@@ -168,14 +174,21 @@ body{
 .container .right h1 span{
 	color: #F31414;
 }
+
+.container .right p span{
+	color: #F31414;
+}
+
 .right p{
 	font-size: 25px;
 	margin:20px 0px;
+
 }
+
 .Buy-btn{
     padding: 15px 35px;
     border: none;
-    outline: none;
+    outline: ;
     cursor: pointer;
     background: #101010;
     color: white;
@@ -188,6 +201,39 @@ body{
 	text-decoration: none;
 	
 }
+
+.service-center {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+	gap: 5rem;
+}
+
+.service {
+	border: 3px solid #EC1C1C;
+	padding: 1rem 1rem 2rem 1rem;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	background-image: url(../images/Service_BG.jpg);
+}
+
+.service .icon {
+	color: Black;
+	font-size: 4rem;
+}
+
+.service h4 {
+	margin-bottom: 1.8rem;
+	margin-top: 0.8rem;
+	font-size: 1.5rem;
+}
+
+.service .text{
+	margin-bottom: 0.8rem;
+	font-size: 1.5rem;
+	color: Black;
+}
+
 .about .row{
     display: flex;
     align-items: center;
@@ -228,12 +274,17 @@ body{
     background:#FFC300;
     cursor: pointer;
 	text-decoration: none;
+	text-transform: capitalize;
+	border-radius: .5rem;
+	margin-top: 5rem;
 }
 
 .btn:hover{
     letter-spacing: .1rem;
+	 background: Red;
 
 }
+
 
 .Best .box-container{
     display: flex;
@@ -276,6 +327,7 @@ body{
 	margin-bottom:8px;
 }
 
+
 .Best .box-container .box .icons{
     position: absolute;
     top:1rem; right:1rem;
@@ -297,6 +349,86 @@ body{
 .Best .box-container .box .icons a:hover{
     background:Black;
     color:red;
+}
+
+.menu .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:1.5rem;
+}
+
+.menu .box-container .box{
+    background: #eee;
+    border:.1rem solid rgba(0,0,0,.2);
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+	border: 0.3rem solid #1A1F24;
+}
+
+.menu .box-container .box .image{
+    height: 25rem;
+    width: 100%;
+    padding:1.5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.menu .box-container .box .image img{
+    height: 100%;
+    width: 100%;
+    border-radius: .5rem;
+    object-fit: cover;
+}
+
+.menu .box-container .box .image .fa-heart{
+    position: absolute;
+    top:2.5rem; right: 2.5rem;
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    background: #fff;
+    border-radius: 50%;
+    color:#192a56;
+}
+
+.menu .box-container .box .image .fa-heart:hover{
+    background-color: Black;
+    color:Red;
+}
+
+.menu .box-container .box .content{
+    padding:2rem;
+    padding-top: 0;
+}
+
+.menu .box-container .box .content .stars{
+    padding-bottom: 1rem;
+}
+
+.menu .box-container .box .content .stars i{
+   font-size: 1.7rem;
+   color:#D4EB29;
+}
+
+.menu .box-container .box .content h3{
+    color:#192a56;
+    font-size: 2.5rem;
+	text-transform: capitalize;
+}
+
+.menu .box-container .box .content p{
+    color:#666;
+    font-size: 1.6rem;
+    padding:.5rem 0;
+    line-height: 1.5;
+}
+
+.menu .box-container .box .content .price{
+    color:Black;
+    margin-left: 1rem;
+    font-size: 2.5rem;
 }
 
 #Products{
@@ -446,50 +578,38 @@ body{
     text-transform: none;
     background:none;
 }
-.footer{
-    background:Grey;
-    text-align: center;
+
+.footer {
+	background-color: #f5f5f5;
+	margin-top: 10rem;
+	border-top:0.3rem solid #1A1F24;
+}
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap:1.5rem;
+
 }
 
-.footer .share{
-    padding:1rem 0;
+.footer .box-container .box h3{
+    padding:.5rem 0;
+    font-size: 2.5rem;
+    color:var(--black);
+	text-transform: capitalize;
+	margin-left: 10rem;
 }
 
-.footer .share a{
-    height: 5rem;
-    width: 5rem;
-    line-height: 5rem;
-    font-size: 2rem;
+.footer .box-container .box a{
+    display: block;
+    padding:.5rem 0;
+    font-size: 1.5rem;
     color:Black;
-    margin:.3rem;
-	border-style: solid;
-	border-width: 2px;
-    border-radius: 50%;
+	text-decoration: None;
+	text-transform: capitalize;
+	margin-left: 10rem;
 }
 
-.footer .share a:hover{
-    background-color:Orange;
-	
-}
-
-.footer .links{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding:2rem 0;
-    gap:1rem;
-}
-
-.footer .links a{
-    padding:.7rem 2rem;
-    color:#eee;
-	border-radius: 300px;
-    font-size: 2rem;
-	text-decoration: none;
-	border-style: solid;
-	border-width: 4px;
-}
-
-.footer .links a:hover{
-    background:Orange;
+.footer .box-container .box a:hover{
+    color:Red;
+    text-decoration: underline;
 }
